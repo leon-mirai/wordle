@@ -8,19 +8,23 @@ async function init() {
     if (currentGuess.length < ANS_LENGTH) {
       currentGuess += letter;
     } else {
-      currentGuess = currentGuess.substring(0, currentGuess.length - 1) + letter;
+      currentGuess =
+        currentGuess.substring(0, currentGuess.length - 1) + letter;
     }
-
+    console.log(`position: ${ANS_LENGTH * rowGuess + currentGuess.length - 1}`);
     letters[ANS_LENGTH * rowGuess + currentGuess.length - 1].innerText = letter;
   }
 
   function commit() {
-    if (currentGuess != ANS_LENGTH - 1) {
+    if (currentGuess.length !== ANS_LENGTH) {
       // do nothing
+      console.log("Hi");
       return;
     }
-
-    rowGuess++;
+    if (rowGuess < ANS_LENGTH) {
+      currentGuess = "";
+      rowGuess++;
+    }
 
     // validate word
   }
