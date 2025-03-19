@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* a nice font that uses a user's built in font */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  text-align: center;
+  padding: 15px;
+}
+
+.brand {
+  font-size: 30px;
+}
+
+.spiral {
+  text-align: center;
+  font-size: 50px;
+}
+
+.scoreboard {
+  max-width: 300px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 10px auto;
+  row-gap: 10px;
+  column-gap: 5px;
+}
+
+.scoreboard-letter {
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 3px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
